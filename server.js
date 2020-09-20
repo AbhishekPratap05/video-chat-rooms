@@ -7,6 +7,8 @@ const {v4:uuidv4} = require('uuid');
 
 app.set('view engine','ejs');
 
+app.use(express.static('public'));
+
 app.get('/', (request,response)=>{
     response.redirect(`/${uuidv4()}`);
 });
