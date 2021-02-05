@@ -82,9 +82,6 @@ const addVideoStream = (video, stream) => {
 }
 
 const leaveChat = (userId, stream) => {
-    stream.getTracks().forEach(function (track) {
-        track.stop();
-    });
     removeUserFromChat(userId)
 }
 const removeUserFromChat = (userId) => {
